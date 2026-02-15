@@ -22,9 +22,9 @@ export function ContactCard({
   name = "Oscar Mauricio",
   role = "Diseñador gráfico - UX/UI",
   avatarUrl = "/icono_black.png",
-  whatsappUrl = "https://wa.me/",
-  emailUrl = "mailto:hello@portfolio.com",
-  telegramUrl = "https://t.me/",
+  whatsappUrl = "https://wa.me/63410228",
+  emailUrl = "mailto:mauricioporrasmendez@gmail.com",
+  telegramUrl = "https://t.me/ocasamax",
   compact = false,
 }: ContactCardProps) {
   if (compact) {
