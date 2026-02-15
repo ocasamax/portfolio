@@ -17,4 +17,24 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          // Split vendor chunks for better caching
+          vendor: ["react", "react-dom", "react-router-dom"],
+          ui: ["@radix-ui/react-dialog", "@radix-ui/react-tooltip"],
+        },
+      },
+    },
+    // Inline small assets (under 4KB)
+    assetsInlineLimit: 4096,
+    // Warning limit for chunk size
+    chunkSizeWarningLimit: 1000,
+    // Minification (uses esbuild by default which is faster than terser)
+  },
+  // Optimize dependencies
+  optimizeDeps: {
+    include: ["react", "react-dom", "react-router-dom"],
+  },
 }));

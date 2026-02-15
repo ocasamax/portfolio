@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import { useParams, Navigate, Link } from "react-router-dom";
 import { categories } from "@/data/portfolio";
 import { ArrowLeft } from "lucide-react";
@@ -9,8 +10,15 @@ export default function ProjectPage() {
     projectId: string;
   }>();
 
-  const category = categories.find((c) => c.slug === categorySlug);
-  const project = category?.images.find((img) => img.id === projectId);
+  const category = useMemo(() => 
+    categories.find((c) => c.slug === categorySlug),
+    [categorySlug]
+  );
+  
+  const project = useMemo(() => 
+    category?.images.find((img) => img.id === projectId),
+    [category, projectId]
+  );
 
   if (!category || !project) {
     return <Navigate to="/" replace />;
@@ -46,6 +54,11 @@ export default function ProjectPage() {
               key={index}
               src={imgSrc}
               alt={`${project.alt} - imagen ${index + 1}`}
+              width={1200}
+              height={800}
+              loading={index === 0 ? "eager" : "lazy"}
+              decoding="async"
+              fetchPriority={index === 0 ? "high" : "auto"}
               className="w-full h-auto rounded-xl"
             />
           ))}

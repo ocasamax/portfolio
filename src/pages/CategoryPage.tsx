@@ -1,10 +1,15 @@
+import { useMemo } from "react";
 import { useParams, Navigate } from "react-router-dom";
 import { categories } from "@/data/portfolio";
 import { Gallery } from "@/components/Gallery";
 
 export default function CategoryPage() {
   const { slug } = useParams<{ slug: string }>();
-  const category = categories.find((c) => c.slug === slug);
+  
+  const category = useMemo(() => 
+    categories.find((c) => c.slug === slug),
+    [slug]
+  );
 
   if (!category) return <Navigate to="/" replace />;
 

@@ -57,7 +57,7 @@ export function ContactCard({
             className="h-8 w-8 rounded-lg text-muted-foreground hover:text-foreground"
             asChild
           >
-            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp (abre en nueva pestaña)">
               <MessageCircle className="h-4 w-4" />
             </a>
           </Button>
@@ -67,7 +67,7 @@ export function ContactCard({
             className="h-8 w-8 rounded-lg text-muted-foreground hover:text-foreground"
             asChild
           >
-            <a href={emailUrl}>
+            <a href={emailUrl} aria-label="Enviar correo electrónico">
               <Mail className="h-4 w-4" />
             </a>
           </Button>
@@ -77,7 +77,7 @@ export function ContactCard({
             className="h-8 w-8 rounded-lg text-muted-foreground hover:text-foreground"
             asChild
           >
-            <a href={telegramUrl} target="_blank" rel="noopener noreferrer">
+            <a href={telegramUrl} target="_blank" rel="noopener noreferrer" aria-label="Contactar por Telegram (abre en nueva pestaña)">
               <Send className="h-4 w-4" />
             </a>
           </Button>
@@ -116,7 +116,7 @@ export function ContactCard({
           className="w-full justify-start gap-3 rounded-xl border-border/50 hover:bg-primary hover:text-primary-foreground transition-colors"
           asChild
         >
-          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp (abre en nueva pestaña)">
             <MessageCircle className="h-4 w-4" />
             Contactar por WhatsApp
           </a>
@@ -126,7 +126,7 @@ export function ContactCard({
           className="w-full justify-start gap-3 rounded-xl border-border/50 hover:bg-primary hover:text-primary-foreground transition-colors"
           asChild
         >
-          <a href={emailUrl}>
+          <a href={emailUrl} aria-label="Enviar correo electrónico">
             <Mail className="h-4 w-4" />
             Contactar por correo
           </a>
@@ -136,7 +136,7 @@ export function ContactCard({
           className="w-full justify-start gap-3 rounded-xl border-border/50 hover:bg-primary hover:text-primary-foreground transition-colors"
           asChild
         >
-          <a href={telegramUrl} target="_blank" rel="noopener noreferrer">
+          <a href={telegramUrl} target="_blank" rel="noopener noreferrer" aria-label="Contactar por Telegram (abre en nueva pestaña)">
             <Send className="h-4 w-4" />
             Contactar por Telegram
           </a>
