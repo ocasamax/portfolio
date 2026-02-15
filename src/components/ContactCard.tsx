@@ -21,7 +21,7 @@ interface ContactCardProps {
 export function ContactCard({
   name = "Oscar Mauricio",
   role = "Diseñador gráfico - UX/UI",
-  avatarUrl = "/src/img/icono_black.png",
+  avatarUrl = "/icono_black.png",
   whatsappUrl = "https://wa.me/",
   emailUrl = "mailto:hello@portfolio.com",
   telegramUrl = "https://t.me/",
