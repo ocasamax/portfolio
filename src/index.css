@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* ═══════════════════════════════════════════════════════════════ */
+    /* PALETA BASE - Solo modificar estos 5 valores para personalizar  */
+    /* ═══════════════════════════════════════════════════════════════ */
+    --color-bg: #f4f4f4;           /* Fondos principales */
+    --color-fg: #0f0f0f;           /* Texto principal */
+    --color-muted: #ececec;        /* Fondos secundarios/sutiles */
+    --color-border: #EBEBEB;       /* Bordes y separadores */
+    --color-accent: #EF4444;       /* Errores y estados destructivos */
+    
+    /* ═══════════════════════════════════════════════════════════════ */
+    /* ASIGNACIÓN SEMÁNTICA - No es necesario modificar                */
+    /* Todas las variables usadas por Tailwind y shadcn/ui            */
+    /* ═══════════════════════════════════════════════════════════════ */
+    --background: var(--color-bg);
+    --foreground: var(--color-fg);
+    --border: var(--color-border);
+    --input: var(--color-border);
+    --ring: var(--color-fg);
+    
+    --primary: var(--color-fg);
+    --primary-foreground: var(--color-bg);
+    
+    --secondary: var(--color-muted);
+    --secondary-foreground: var(--color-fg);
+    
+    --muted: var(--color-muted);
+    --muted-foreground: #757575;    /* Gris medio para texto secundario */
+    
+    --accent: var(--color-muted);
+    --accent-foreground: var(--color-fg);
+    
+    --destructive: var(--color-accent);
+    --destructive-foreground: var(--color-bg);
+    
+    --card: var(--color-bg);
+    --card-foreground: var(--color-fg);
+    
+    --popover: var(--color-bg);
+    --popover-foreground: var(--color-fg);
+    
+    --sidebar-background: var(--color-bg);
+    --sidebar-foreground: var(--color-fg);
+    --sidebar-primary: var(--color-fg);
+    --sidebar-primary-foreground: var(--color-bg);
+    --sidebar-accent: var(--color-muted);
+    --sidebar-accent-foreground: var(--color-fg);
+    --sidebar-border: var(--color-border);
+    --sidebar-ring: var(--color-fg);
+    
+    /* Variables para utilidades arbitrarias */
+    --color-white: var(--color-bg);
+    --color-black: var(--color-fg);
+  }
+
+  .dark {
+    /* ═══════════════════════════════════════════════════════════════ */
+    /* PALETA BASE - Dark Mode (modo oscuro)                          */
+    /* Solo cambia estos 5 valores, el resto se hereda automáticamente */
+    /* ═══════════════════════════════════════════════════════════════ */
+    --color-bg: #0f0f0f;
+    --color-fg: #f4f4f4;
+    --color-muted: #1A1A1A;
+    --color-border: #2A2A2A;
+    --color-accent: #EF4444;
+    
+    /* ═══════════════════════════════════════════════════════════════ */
+    /* EXCEPCIONES - Solo modificar si necesitas ajustes específicos   */
+    /* ═══════════════════════════════════════════════════════════════ */
+    --muted-foreground: #A0A0A0;    /* Gris más claro para dark mode */
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+}
