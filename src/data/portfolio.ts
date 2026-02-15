@@ -55,10 +55,10 @@ export const categories: Category[] = [
     images: [
       {
         id: "brand-bortyxgeek",
-        src: "/proyectos/branding/bortyxgeek-portada.jpg",
+        src: "/proyectos/Branding/bortyxgeek-portada.jpg",
         alt: "Bortyx Geek branding project",
         caption: "Bortyx Geek",
-        images: ["/proyectos/branding/bortyxgeek-img.webp"],
+        images: ["/proyectos/Branding/bortyxgeek-img.webp"],
       },
       ...Array.from({ length: 14 }, (_, i) => ({
         id: `brand-${i + 2}`,
